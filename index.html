@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="head">
+        <div class="container">
+            <nav>
+                
+                <img src="/images/img3.jpeg" class="logo">
+               
+        <ul>
+            <li><a href="#head">Home</a></li>
+            <li><a href="#abt">About</a></li>
+            <li><a href="#skills11">Skill</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+            </nav>
+            
+            <div class="text">
+                
+                <h2>Hi, I'm <span>Fathima Thanha</span></h2>
+                
+                
+                
+               
+                 <img src="/images/img1.jpeg" id="img1">
+            </div>
+        
+           
+        </div>
+        
+ </div>
+
+    <!--about-->
+
+   <div id="abt">
+    <div class="cntnr">
+    <div class="row">
+        <div class="col1">
+            <img src="/images/img2.jpeg">
+        </div>
+        <div class="col2">
+            <h1 class="h1t">About Me</h1>
+            <p>I'm Fathima Thanha.I graduated in BSc Computer Science <br>from NAM College Kallikkandy.Currently,<br>i am working as an intern at Bridgeon,Kakkanchery. </p>
+            <div class="sub">
+                <p class="see active" onclick="opentab('skills')">Skills</p>
+                <p class="see "onclick="opentab('education')">Education</p>
+                <p class="see"onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="tab-cntnt active" id="skills">
+                <ul>
+                    <li>HTML</li>
+                    <li>Css</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+            <div class="tab-cntnt" id="education">
+                <ul>
+                    <li>SSLC</li>
+                    <li>HSE</li>
+                    <li>BSC CS</li>
+                </ul>
+            </div>
+            <div class="tab-cntnt" id="experience">
+                <ul>
+                    <li>1 month internship<br>at Bridgeon</li>
+                </ul>
+            </div>
+      
+        </div>
+    </div>
+   </div>
+  </div> 
+    
+  <!--skill-->
+  
+  
+<section id="skills11">
+  <div class="hd">
+    <h1 class="sectiont">My <span>Skills</span></h1>
+  </div>
+  <div class="container1">
+    <div class="technical-bars">
+      <div class="bar">
+        <div class="info">
+          <i class="fa-brands fa-html5" style="color:#f06529;"></i>
+          <span>HTML</span>
+        </div>
+        <div class="progress-line html">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <i class="fa-brands fa-css3-alt" style="color:#2965f1;"></i>
+          <span>CSS</span>
+        </div>
+        <div class="progress-line css">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <i class="fa-brands fa-js" style="color:#f0db4f;"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="progress-line javascript">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!--contact-->
+
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+        <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p> <i class="fa-solid fa-paper-plane"></i>thanhamuneer369@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>0987654321</p>
+            <div class="social">
+                <a href=" #"><i class="fa-brands fa-instagram"></i></a>
+                 <a href="# "><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email"required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    
+  </div>
+
+<script>
+  var tablinks = document.getElementsByClassName("see");
+  var tabcontents = document.getElementsByClassName("tab-cntnt");
+
+  function opentab(tabname) {
+    for (let link of tablinks) {
+      link.classList.remove("active");
+    }
+    for (let content of tabcontents) {
+      content.classList.remove("active");
+    }
+
+    event.currentTarget.classList.add("active");
+    document.getElementById(tabname).classList.add("active");
+  }
+</script>
+
+</script>
+</body>
+</html>

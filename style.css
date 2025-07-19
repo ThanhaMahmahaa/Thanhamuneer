@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: brown;
+}
+
+.text {
+  display: flex;
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.text h2 span {
+  color: brown;
+}
+
+/* about */
+
+#abt {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.col1 {
+  flex-basis: 35%;
+  
+}
+
+.col1 img {
+  width: 70%;
+  border-radius: 45px;
+  margin: 100px 0;
+}
+
+.col2 {
+  flex-basis: 60%;
+  margin-top: 50px;
+}
+
+.h1t {
+  font-size: 60px;
+  font-weight: 500;
+  color: brown;
+}
+
+.sub {
+  display: flex;
+  margin: 20px 0 40px;
+  
+  
+}
+#skills11{
+  margin: auto;
+  padding:30px;
+max-width: 600px;
+}
+.sectiont{
+    text-align: center;
+    font-size: 40px;
+    margin:40px 0 20px;
+}
+.sectiont span{
+    color:brown;
+}
+
+.see {
+  margin-right: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.see::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(40, 40, 16);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.see.active::after {
+  width: 100%;
+}
+
+.tab-cntnt ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: 13px;
+  color: brown;
+}
+
+.tab-cntnt {
+  display: none;
+}
+
+.tab-cntnt.active {
+  display: block;
+}
+
+/* contact */
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 50%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff005f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social {
+  margin-top: 30px;
+}
+
+.social a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+}
+
+.social a:hover {
+  color: #ff005f;
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #ff005f;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+.technical-bars .bar {
+  margin-bottom: 30px;
+}
+
+.bar {
+  font-size: 20px;
+  margin: 30px 0;
+  transition: transform 0.3s ease;
+}
+
+.bar:hover {
+  transform: scale(1.03);
+}
+
+.bar .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.bar .info i {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.bar:hover .info i {
+  transform: scale(1.2);
+}
+
+.progress-line {
+  position: relative;
+  width: 90%;
+  height: 12px;
+  background: #2f2f2f;
+  border-radius: 6px;
+  overflow: hidden;
+  margin:10px;
+}
+
+.progress-line span {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow 1.5s ease-out forwards;
+  
+}
+
+.progress-line.html span {
+  width: 85%;
+  background: #f06529;
+}
+
+.progress-line.css span {
+  width: 75%;
+  background: #2965f1;
+}
+
+.progress-line.javascript span {
+  width: 60%;
+  background: #f0db4f;
+}
+
+
+.progress-line span::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 10px;
+  top: -30px;
+  background: #111;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0;
+  animation: showLabel 1.2s forwards;
+  transform: translateY(-10px);
+}
+
+@keyframes grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showLabel {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#img1 {
+  margin-top: -100px;
+  margin-left: 70px;
+  border-radius: 50px;
+  width: 300px;
+  height: 350px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 992px) {
+  .text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+  }
+
+  #img1 {
+    margin: 20px auto 0;
+    width: 250px;
+    height: auto;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+
+  .container {
+    padding: 10px 5%;
+  }
+
+  .col1,
+  .col2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .col1 img {
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .sub {
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .container1 {
+    width: 100%;
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text h2 {
+    font-size: 28px;
+  }
+
+  .h1t {
+    font-size: 36px;
+  }
+
+  .bar {
+    font-size: 18px;
+  }
+
+  .bar .info span {
+    font-size: 14px;
+  }
+
+  .progress-line span::after {
+    font-size: 10px;
+    top: -25px;
+    right: -10px;
+  }
+
+  .see {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .social a {
+    font-size: 24px;
+    margin: 5px;
+  }
+
+  .btn.btn2 {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+}
+.hd{
+    align-items: center;
+}
+.logo {
+  width: 150px;         
+  height: auto;        
+  border-radius: 50%;  
+  margin-right: auto;  
+}
